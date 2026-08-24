@@ -44,20 +44,14 @@ function processPayment() {
     return new Promise(function(resolve) {
         setTimeout(function() {
             resolve("Payment Successful!");
-
         }, 2000);
     });
 }
 payButton.addEventListener("click", function() {
     paymentMessage.textContent = "Processing payment...";
     processPayment()
-
         .then(function(message) {
-
             paymentMessage.textContent = message;
-
             payButton.disabled = true;
-
         });
-
 });
